@@ -17,6 +17,7 @@ def menu():
     print("[1] 2018/19")
     print("[2] 2019/20")
     print("[3] 2020/21")
+    print("[0] Exit the program.")
     # Text based menu that allows the user to choose what season they would like to view
 
 
@@ -25,7 +26,7 @@ option1 = int(input("Please enter your option: "))
 
 while option1 != 0:
     if option1 == 1:
-        print("Premier League Table 2019/20")
+        print("Premier League Table 2018/19")
         print("Please choose what type of data visualisation you would like to see:")
         print("[1] Bar Chart")
         print("[2] Pie Chart")
@@ -39,7 +40,7 @@ while option1 != 0:
             if option2 == 1:
             # This option will display a visualisation of a bar chart
                 plt.bar(Teams1, Points1)
-                plt.title('Premier League Table 2019/20 Season')
+                plt.title('Premier League Table 2018/19 Season')
                 plt.xlabel('Teams')
                 plt.ylabel('Points')
                 plt.show()  
@@ -51,7 +52,7 @@ while option1 != 0:
                 fig1 = plt.figure()
                 ax1 = fig1.add_axes([0,0,1,1])
                 ax1.axis('equal')
-                ax1.pie(Points1, labels1 = Teams1,autopct='%.2f%%')
+                ax1.pie(Points1, labels = Teams1,autopct='%.2f%%')
                 plt.show()
             else:
                 print("Invalid option, please try again.")
@@ -86,7 +87,7 @@ while option1 != 0:
                 fig2 = plt.figure()
                 ax2 = fig2.add_axes([0,0,1,1])
                 ax2.axis('equal')
-                ax2.pie(Points2, labels2 = Teams2,autopct='%.2f%%')
+                ax2.pie(Points2, labels = Teams2,autopct='%.2f%%')
                 plt.show()
             else:
                 print("Invalid option, please try again.")
@@ -95,7 +96,7 @@ while option1 != 0:
         option3 = int(input("Please enter your option: "))
     
     elif option1 == 3:
-        print("Premier League Table 2019/20")
+        print("Premier League Table 2020/21")
         print("Please choose what type of data visualisation you would like to see:")
         print("[1] Bar Chart")
         print("[2] Pie Chart")
@@ -109,7 +110,7 @@ while option1 != 0:
             if option4 == 1:
             # This option will display a visualisation of a bar chart
                 plt.bar(Teams3, Points3)
-                plt.title('Premier League Table 2019/20 Season')
+                plt.title('Premier League Table 2020/21 Season')
                 plt.xlabel('Teams')
                 plt.ylabel('Points')
                 plt.show()
@@ -119,7 +120,7 @@ while option1 != 0:
                 fig3 = plt.figure()
                 ax3 = fig3.add_axes([0,0,1,1])
                 ax3.axis('equal')
-                ax3.pie(Points3, labels3 = Teams3,autopct='%.2f%%')
+                ax3.pie(Points3, labels = Teams3,autopct='%.2f%%')
                 plt.show()
             else:
                 print("Invalid option, please try again.")
@@ -141,3 +142,6 @@ while option1 != 0:
 print("Thank you, goodbye.")
 plt.close('all')
 # Closes any remaining figures open
+
+
+
